@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+  button, input, optgroup, select, textarea { font-family: inherit; }
+}
+
+@layer components {
+  .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(192, 164, 128, 0.2); }
+  .reveal-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+  .reveal-on-scroll.revealed { opacity: 1; transform: translateY(0); }
+  .section-nav-link { position: relative; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); letter-spacing: 0.15em; color: #94a3b8; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; padding-bottom: 4px; }
+  @media (min-width: 768px) { .section-nav-link { font-size: 0.8rem; letter-spacing: 0.2em; } }
+  .section-nav-link:hover { color: #2d618e; }
+  .section-nav-link.active { color: #f57238 !important; }
+  .section-nav-link::after { content: ''; position: absolute; bottom: -8px; left: 50%; width: 0; height: 3px; background: #f57238; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); transform: translateX(-50%); border-radius: 0; opacity: 0; }
+  .section-nav-link.active::after { width: 100%; opacity: 1; }
+  #chat-window { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform: scale(0.8) translateY(20px); opacity: 0; pointer-events: none; }
+  #chat-window.open { transform: scale(1) translateY(0); opacity: 1; pointer-events: auto; }
+  .switcher-pill { transition: all 0.3s ease; }
+  .switcher-pill.active { background-color: #2d618e; color: white; }
+  .faq-item .faq-answer { max-height: 0; opacity: 0; transition: all 0.4s ease-in-out; overflow: hidden; }
+  .faq-item.active .faq-answer { max-height: 1000px; opacity: 1; }
+  .faq-item.active .faq-icon { transform: rotate(45deg); }
+  .carousel-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1000ms ease-in-out, transform 8000ms ease-out; transform: scale(1); border-radius: 0 !important; }
+  .carousel-slide.active { opacity: 1; transform: scale(1.1); }
+  .accordion-item { transition: all 0.3s ease; }
+  .accordion-header { cursor: pointer; width: 100%; text-align: left; }
+  .accordion-body { max-height: 0; opacity: 0; overflow: hidden; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+  .accordion-item.active .accordion-body { max-height: 1200px; opacity: 1; }
+  .marquee-mask { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+  .animate-marquee { animation: marquee 40s linear infinite; }
+}
+
+@layer utilities {
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; }
+  ::-webkit-scrollbar-thumb { background: #c0a480; border-radius: 0; }
+  ::-webkit-scrollbar-thumb:hover { background: #2d618e; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.pause-on-hover:hover .animate-marquee { animation-play-state: paused; }

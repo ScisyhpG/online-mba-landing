@@ -1,0 +1,11 @@
+# NPM packages
+node_modules/
+
+# The generated output folder from Eleventy
+_site/
+
+# Mac system files (if you ever work on a Mac)
+.DS_Store
+
+# Environment variables (For secret API keys if we gonna use any)
+.env

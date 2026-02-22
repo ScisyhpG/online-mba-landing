@@ -1,0 +1,42 @@
+<section id="entry-criteria" class="py-24 bg-white scroll-mt-32">
+    <div class="container mx-auto px-6 max-w-6xl">
+        <div class="text-center mb-16 reveal-on-scroll">
+            <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs mb-4 block flex items-center justify-center gap-3">
+                <span class="w-8 h-[2px] bg-brand-orange"></span> Admissions <span class="w-8 h-[2px] bg-brand-orange"></span>
+            </span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-900">Entry Criteria</h2>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-12 reveal-on-scroll">
+            <div class="md:col-span-4 flex flex-col gap-2">
+                <button onclick="window.switchEntryTab('requirements')" id="tab-requirements" class="entry-tab active w-full text-left p-5 border-l-4 border-brand-orange bg-brand-skyLight/20 text-brand-900 font-bold text-lg transition-all duration-300">Entry Requirements</button>
+                <button onclick="window.switchEntryTab('rpl')" id="tab-rpl" class="entry-tab w-full text-left p-5 border-l-4 border-transparent hover:border-brand-orange/30 hover:bg-gray-50 text-gray-500 hover:text-brand-900 font-bold text-lg transition-all duration-300">Recognition of Prior Learning</button>
+            </div>
+
+            <div class="md:col-span-8 bg-gray-50 rounded-[2rem] p-10 relative overflow-hidden min-h-[400px]">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-sky/5 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+
+                <div id="content-requirements" class="entry-content transition-all duration-500 opacity-100 translate-x-0">
+                    <h3 class="text-3xl font-serif font-bold text-brand-900 mb-6">Standard Entry Pathways</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">To qualify for the Master of Business Administration, applicants generally need one of the following:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange mt-0.5 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700 font-medium">A recognised bachelor’s degree in a related discipline (e.g., Business, Management).</span></li>
+                        <li class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange mt-0.5 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700 font-medium">A recognised bachelor’s degree in any discipline plus 2 years of relevant work experience.</span></li>
+                        <li class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange mt-0.5 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700 font-medium">A recognised Graduate Certificate in a related discipline.</span></li>
+                    </ul>
+                    <div class="mt-8 pt-8 border-t border-gray-200"><p class="text-xs text-gray-500 italic">* English language proficiency requirements apply for international students or non-native speakers.</p></div>
+                </div>
+                
+                <div id="content-rpl" class="entry-content hidden transition-all duration-500 opacity-0 translate-x-4">
+                    <h3 class="text-3xl font-serif font-bold text-brand-900 mb-6">Recognition of Prior Learning</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">We value your experience. If you have significant managerial experience but lack a formal degree, you may still be eligible via our Professional Entry Pathway.</p>
+                    <ul class="space-y-4 mb-8">
+                         <li class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-brand-sky/10 flex items-center justify-center text-brand-sky mt-0.5 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700 font-medium">Assessment based on professional portfolio and CV.</span></li>
+                         <li class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-brand-sky/10 flex items-center justify-center text-brand-sky mt-0.5 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="text-gray-700 font-medium">Potential credit transfer for previous postgraduate studies.</span></li>
+                    </ul>
+                    <a href="/apply" class="inline-block text-sm font-bold text-brand-900 border-b-2 border-brand-orange hover:text-brand-orange transition-colors">Start your application now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
